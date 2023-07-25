@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Everything Wawa NJ</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h3 class="over_eight">
+                Everything Wawa NJ - The Place For Everything Wawa in the Garden State 
+            </h3>
+            <h3 class="between_eight_and_five">
+                Everything Wawa NJ - The Place For Everything Wawa
+            </h3>
+            <h3 class="under_five">
+                Everything Wawa NJ
+            </h3>
+            <a href="index.html"> <img class="respect" src="image-files/wawa_store-min.jpeg" alt="Beginning of a very large wawa design complex"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="food_review.html">Food Review</a></li>
+                    <li><a href="location_info.html">Location Info</a></li>
+                    <li><a href="merch.html">Merch</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="about.html">About</a></li>          
+                    <li><a href="contact.html">Contact</a></li>   
+                </ul>
+            </nav>
+        </header>   
+        <main>                       
+            <div id="img_container">
+                <img alt="the front of a wawa store" class="slide showing" src="image-files/wawa_front.JPG">
+                <img alt="the uber eats section of a wawa" class="slide" src="image-files/uber_eats.JPG">
+                <img alt="coffee cups for wawa consumers to use" class="slide" src="image-files/wawa_cups.JPG">
+                <img alt="a typical looking wawa gas station up close" class="slide" src="image-files/gas_station.jpg">
+                <img alt="gift cards for any wawa store" class="slide" src="image-files/wawa_gift_cards.JPG"> 
+            </div>
+            <script>
+                let slides = document.querySelectorAll("#img_container .slide");
+                let currentSlide = 0;
+                let slideInterval = setInterval(nextSlide, 2000);
+
+                function nextSlide() {
+                    slides[currentSlide].className = "slide";
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].className = "slide showing";
+                }
+            </script>
+            <p class="onecol">
+                Wawa is the best convience store in existence. However, not all wawas are the same, and despite wawa being so great not everything is great. This site is an unfiltered true wawa experience
+                <br><br>
+            </p>
+            <div class="container">
+                <a href="https://www.wawa.com/" target="_blank" rel="noopener noreferrer"> <img class="respect_link" src="image-files/wawa_logo.jpeg" alt="Famous logo of wawa in a fancy looking typography and design" style="width:100%;"></a>
+                <div class="top-left"> 
+                    click the image to be redirected to wawa's official website
+                </div>
+            </div>
+        </main>
+        <hr class="solid"> 
+        <footer>
+            Copyright 2021 - Everything Wawa NJ. Sponsored by: TCNJ IMM Department
+        </footer>
+    </body>
+</html>
